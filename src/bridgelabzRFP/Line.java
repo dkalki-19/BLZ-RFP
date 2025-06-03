@@ -15,4 +15,12 @@ public class Line {
         int deltaY = end.getY() - start.getY();
         return Math.sqrt(deltaX * deltaX + deltaY * deltaY);
     }
+    
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof Line)) return false;
+        Line other = (Line) obj;
+        return Double.compare(this.getLength(), other.getLength()) == 0;
+    }
 }
