@@ -18,5 +18,15 @@ public class Main {
         } else {
             System.out.println("The two lines are not equal in length.");
         }
+        
+        int result = line1.compareTo(line2);
+
+        if (result == 0) {
+            System.out.println("The two lines are equal in length.");
+        } else if (result < 0) {
+            System.out.println("Line 1 is shorter than Line 2.");
+        } else {
+            System.out.println("Line 1 is longer than Line 2.");
+        }
 	}
 }

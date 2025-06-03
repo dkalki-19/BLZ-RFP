@@ -1,7 +1,7 @@
 package bridgelabzRFP;
 
 
-public class Line {
+public class Line implements Comparable<Line>{
     private final Point start;
     private final Point end;
 
@@ -22,5 +22,10 @@ public class Line {
         if (!(obj instanceof Line)) return false;
         Line other = (Line) obj;
         return Double.compare(this.getLength(), other.getLength()) == 0;
+    }
+    
+    @Override
+    public int compareTo(Line other) {
+        return Double.compare(this.getLength(), other.getLength());
     }
 }
